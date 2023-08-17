@@ -1,7 +1,7 @@
 import os
-"""import openai
+import openai
 
-openai.api_key="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"
+openai.api_key="input your own" #Give key
 
 def generate_response(message):
     response = openai.Completion.create(
@@ -27,19 +27,4 @@ def chatbot_pipeline():
         
         # Bot response
         print("ChatBot:", bot_response)
-chatbot_pipeline() """
-
-import requests
-import PIL.Image
-import numpy as np
-
-def generate_image(text):
-    url = "https://stable-diffusion.cdn.openai.com/v1/generate"
-    data = {"prompt": text}
-    response = requests.post(url, json=data)
-    image_data = np.fromstring(response.content, np.uint8)
-    image = PIL.Image.fromarray(image_data)
-    return image
-
-image = generate_image("A beautiful landscape with a mountain range in the background")
-image.show()
+chatbot_pipeline() 
